@@ -8,19 +8,21 @@ import { ProductRow } from '../components/home/ProductRow';
 import type { Product } from '../types';
 import { api } from '../services/api';
 import { useStore } from '../store/useStore';
+import { products as initialProducts } from '../data/seedProducts';
 
 export const HomePage: React.FC = () => {
   const navigate = useNavigate();
   const { user, isAuthenticated } = useStore();
-  const [products, setProducts] = useState<Product[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [products, setProducts] = useState<Product[]>(initialProducts);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     api.getProducts().then((res) => {
-      setProducts(res.products || []);
+      if (res && res.products && res.products.length > 0) {
+        setProducts(res.products);
+      }
       setIsLoading(false);
-    }).catch((err) => {
-      console.error('Failed to load products:', err);
+    }).catch(() => {
       setIsLoading(false);
     });
   }, []);
@@ -34,7 +36,7 @@ export const HomePage: React.FC = () => {
       <div
         style={{
           maxWidth: '1500px',
-          margin: '-90px auto 0 auto',
+          margin: '-120px auto 0 auto',
           padding: '0 20px',
           position: 'relative',
           zIndex: 10,

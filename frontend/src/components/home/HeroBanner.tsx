@@ -9,22 +9,27 @@ export const HeroBanner: React.FC = () => {
     <div
       style={{
         position: 'relative',
-        height: '340px',
+        height: '380px',
+        minHeight: '340px',
         width: '100%',
         overflow: 'hidden',
         cursor: 'pointer',
+        backgroundColor: '#eaeded',
       }}
       onClick={() => navigate('/search')}
     >
       {/* Valentine's Day Hero Background Image */}
-      <div
+      <img
+        src="/assets/reference/hero_valentines.png"
+        alt="Explore Valentine's Day - Shop Deals"
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: `url('/assets/reference/hero_valentines.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center top',
-          backgroundRepeat: 'no-repeat',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: 'center top',
+          display: 'block',
         }}
       />
 

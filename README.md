@@ -2,6 +2,13 @@
 
 A high-fidelity full-stack recreation of the Amazon Romania Valentine's Day storefront as captured in the competition reference screenshot (`1.jpeg`), powered by a functional Node.js Express backend and SQLite database.
 
+## 🌐 Live Deployments & Repository
+
+- **Live Frontend (Vercel)**: **[https://temporary-snappy-hawthorn-r9r18cp.vercel.app](https://temporary-snappy-hawthorn-r9r18cp.vercel.app)**
+- **GitHub Repository**: **[https://github.com/Yaathrapalani/amazon-romania-valentines](https://github.com/Yaathrapalani/amazon-romania-valentines)**
+- **Render One-Click Deploy**: [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Yaathrapalani/amazon-romania-valentines)
+- **Claim Vercel Deployment Link**: [Claim to Vercel Account](https://vercel.com/claim-deployment?code=dad216ac-bfd2-4e87-be8a-278476a06a81)
+
 ---
 
 ## 🏆 Key Highlights

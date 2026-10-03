@@ -1,0 +1,229 @@
+:root {
+  --amazon-dark: #131921;
+  --amazon-subnav: #232f3e;
+  --amazon-footer: #131a22;
+  --amazon-yellow: #ffd814;
+  --amazon-yellow-hover: #f7ca00;
+  --amazon-orange: #ffa41c;
+  --amazon-orange-hover: #fa8900;
+  --amazon-amber: #febd69;
+  --amazon-amber-hover: #f3a847;
+  --amazon-link: #007185;
+  --amazon-link-hover: #c7511f;
+  --amazon-red: #cc0c39;
+  --amazon-bg: #eaeded;
+  --amazon-text: #0f1111;
+  --amazon-text-muted: #565959;
+  --amazon-border: #d5d9d9;
+  --amazon-card-border: #e7e7e7;
+  --amazon-prime-blue: #00a8e1;
+  --amazon-focus: #e77600;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--amazon-text);
+  background-color: var(--amazon-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--amazon-bg);
+  color: var(--amazon-text);
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--amazon-link);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--amazon-link-hover);
+  text-decoration: underline;
+}
+
+/* Amazon Buttons */
+.btn-amazon-yellow {
+  background: var(--amazon-yellow);
+  border: 1px solid #fcd200;
+  border-radius: 100px;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  color: #0f1111;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.btn-amazon-yellow:hover {
+  background: var(--amazon-yellow-hover);
+  border-color: #f2c200;
+}
+
+.btn-amazon-yellow:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+}
+
+.btn-amazon-orange {
+  background: var(--amazon-orange);
+  border: 1px solid #ff8f00;
+  border-radius: 100px;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  color: #0f1111;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.btn-amazon-orange:hover {
+  background: var(--amazon-orange-hover);
+  border-color: #e67a00;
+}
+
+.btn-amazon-white {
+  background: #ffffff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  color: #0f1111;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 15px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.btn-amazon-white:hover {
+  background: #f7fafa;
+  border-color: #d5d9d9;
+}
+
+/* Amazon Nav Hover Outlines */
+.nav-hover-box {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 6px 8px;
+  transition: border-color 0.1s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.nav-hover-box:hover {
+  border-color: #ffffff;
+}
+
+/* Custom Horizontal Scrollbar */
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #bbb #f1f1f1;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 3px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* Star Rating Display */
+.stars-container {
+  display: inline-flex;
+  align-items: center;
+  color: #de7921;
+}
+
+/* Deal Badge */
+.deal-badge {
+  background-color: var(--amazon-red);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.deal-label {
+  color: var(--amazon-red);
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+/* Prime Badge */
+.prime-badge {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--amazon-prime-blue);
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+
+.prime-check {
+  color: #f79400;
+  font-weight: 900;
+  margin-right: 2px;
+}
+
+/* Layout Utilities */
+.container-amazon {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}

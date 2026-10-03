@@ -58,8 +58,24 @@ app.use('/api', cartRoutes);
 app.use('/api', orderRoutes);
 app.use('/api', paymentRoutes);
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // Centralized Error Handling
 app.use(errorHandler);
+
+// In production, serve the frontend build
+if (process.env.NODE_ENV === 'production') {
+  const clientPath = path.resolve(__dirname, '../../frontend/dist');
+  app.use(express.static(clientPath));
+  // SPA fallback: send all non-API routes to index.html
+  app.get('*', (_req, res) => {
+    res.sendFile(path.join(clientPath, 'index.html'));
+  });
+}
 
 // Start server
 app.listen(PORT, () => {

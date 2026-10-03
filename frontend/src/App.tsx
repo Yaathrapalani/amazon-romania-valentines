@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from './components/layout/Header';
-import { SubNav } from './components/layout/SubNav';
+import SubNav from './components/layout/SubNav';
 import { SideDrawer } from './components/layout/SideDrawer';
 import { Footer } from './components/layout/Footer';
 import { HomePage } from './pages/HomePage';

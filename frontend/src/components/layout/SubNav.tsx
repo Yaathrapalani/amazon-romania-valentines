@@ -1,8 +1,9 @@
-import React from 'react';
+// SubNav – top navigation bar
 import { Menu } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useStore } from '../../store/useStore';
 
+export default function SubNav() {
   const navigate = useNavigate();
   const { openSideMenu } = useStore();
 

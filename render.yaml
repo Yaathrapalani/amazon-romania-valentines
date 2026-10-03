@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: amazon-romania-valentines
+    runtime: node
+    region: frankfurt
+    buildCommand: npm install --prefix frontend && npm run build --prefix frontend && npm install --prefix backend && npm run build --prefix backend
+    startCommand: cd backend && NODE_ENV=production node dist/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
